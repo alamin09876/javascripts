@@ -456,6 +456,55 @@ var names = [" Alamin", " Summa", " Mimma", " Rabi"]
  });
  document.write(number);
 
+//  task 8
+var num = new Array();
+for (var i=0; i<3; i++){
+     num[i]=parseInt(prompt("Enter A number :"));
+}
+
+if (num[0]>num[1] && num[0]>num[2])
+     document.write("Large Number is "+ num[0]);
+else if (num[1]>num[0] && num[1]>num[2])
+     document.write("Large Number is "+ num[1]);
+else
+     document.write("Large Number is "+ num[2]);
+
+// using function to large number
+function higestScore(scores){
+        var max = scores[0];
+        for (var x=1; x<scores.length; x++){
+            if(max<scores[x]){
+                max = scores[x];
+            }
+        }
+        return max;
+    }
+    var scores = [21, 28, 1, 88, 15];
+    var maxScore = higestScore(scores);
+    document.write(maxScore);
+
+// 2d Array higest scorer
+function higestRunScore(playerInfo){
+        var higestScorer = playerInfo[0][0];
+        var higestScorer = playerInfo[0][1];
+        for(var x=1; x<playerInfo.length; x++){
+            if(higestScorer<playerInfo[x][1]){
+                higestScorer = playerInfo[x][1];
+                higestScorer = playerInfo[x][0];
+            }
+        }
+        return higestScorer
+    }
+    var playerInfo = [
+        ["Alamin", 95],
+        ["Summa", 59],
+        ["Mimma", 97],
+        ["Rabi", 80],
+    ];
+    var alamin = higestRunScore(playerInfo);
+    document.write(alamin);
+    
+
 
 
 

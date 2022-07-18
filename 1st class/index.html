@@ -10,8 +10,30 @@
     
 
 
-    <script src="index.js">
+    <script >
+        function higestRunScore(playerInfo){
+            var higestScorer = playerInfo[0][0];
+            var higestScorer = playerInfo[0][1];
+            for(var x=1; x<playerInfo.length; x++){
+                if(higestScorer<playerInfo[x][1]){
+                    higestScorer = playerInfo[x][1];
+                    higestScorer = playerInfo[x][0];
+                }
+            }
+            return higestScorer
+        }
+        var playerInfo = [
+            ["Alamin", 95],
+            ["Summa", 59],
+            ["Mimma", 97],
+            ["Rabi", 80],
+        ];
+        var alamin = higestRunScore(playerInfo);
+        document.write(alamin);
         
+ 
+
+ 
     </script>
 </body>
 </html>
