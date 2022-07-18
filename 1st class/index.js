@@ -1,0 +1,468 @@
+
+var name, age, country;
+
+name ="Al-amin";
+age=23;
+country= "bangladesh";
+document.write(name); 
+document.write('<br/>');
+document.write(age);
+document.write('<br/>');
+document.write(country);
+
+
+ var num=12;
+  num = toString(num);
+   console.log(typeof(num));
+
+ var num="12";
+  num = parseInt(num)
+ console.log(typeof(num))
+ var number=2.2567
+//  toFixed Metho
+  console.log(number.toFixed(2)); 
+ var number=2.2567
+//  toPrecision Metho
+ console.log(number.toPrecision(2));
+//  Number Metho
+ console.log(Number("2.2567")); 
+// String concatnation
+        firstName = "Alamin";
+        lastName = " Ahmed";
+        fullName = firstName + lastName;
+        document.write("My Name is " + fullName);
+
+
+ var text1 = "Bangladesh"
+ var text = text1.length;
+ document.write(text)
+ var text1 =prompt("Enter Your Name :")
+         document.write("Number of crackter" + text1.length)
+ var text1 =prompt("Enter Your Name :");
+         var text =text1.charAt(3)
+         document.write(text)
+ var text1 =prompt("Enter Your Name :");
+         var text =text1.toUpperCase()
+         document.write(text)
+ var text1 =prompt("Enter Your Name :");
+         var text =text1.slice(0,2)
+         document.write(text)
+//  First Assignment :
+
+        var text1 =prompt("Enter Your First Name : ");
+        var text2 =prompt("Enter Your Last Name : ");
+
+        var text = text1+text2;
+        document.write(text);
+        document.write('<br/>');
+        document.write("Number Of the cheracter" + text.length);
+        document.write('<br/>');
+        document.write(text.charAt(2));
+        
+//  Arithematic operator
+         5-3
+         2
+         5*3
+         15
+         5/4
+         1.25
+         2**3
+         8
+         var x = 10
+         x++
+         10
+         x++
+         11
+         ++x
+         13
+// Assignment Operator 
+        var x = 3;
+       var x=-6;
+        document.write(x);
+
+// task 3
+
+ var num1 =prompt("Enter first number :");
+         var num2 =prompt("Enter second number :")
+         num1 = parseInt(num1,10);
+         num2 = parseInt(num2,10);
+         var sum, sub, multiplaction, division, rem
+         sum = num1 + num2;
+         document.write(num1 +"+" +num2 + "=" + sum + "<br>")
+         sub = num1-num2;
+         document.write(num1 +"-" +num2 + "=" + sub + "<br>")
+         multiplaction = num1*num2;
+         document.write(num1 +"*" +num2 + "=" + multiplaction + "<br>" )
+         division = num1/num2;
+         document.write(num1 +"/" +num2 + "=" + division + "<br>" )
+        rem = num1%num2;
+         document.write(num1 +"%" +num2 + "=" + rem );
+
+// Shapes 
+
+ var base =parseFloat(prompt("Enter base number :"));
+         var height =parseFloat(prompt("Enter height number :"))
+         var area = base * height
+         document.write("Area is =" + area);
+
+// Farnheight to celcius :
+
+ var farn =parseFloat(prompt("Enter farn number :"));
+         var cels = (farn-32)*(5/9);
+         document.write("Celcius is =" + cels);
+
+// celcius to Farnheight :
+
+ var cels =parseFloat(prompt("Enter cels number :"));
+         var farn = (cels*(9/5))+32;
+         document.write("Farnheight is =" + farn);
+
+// Relational Operator
+
+ var num1 = 20
+         var num2 = 30
+         document.write(num1>num2);
+         document.write('<br/>');
+         document.write(num1>=num2);
+         document.write('<br/>');
+         document.write(num1<=num2);
+         document.write('<br/>');
+         document.write(num1<num2);
+         document.write('<br/>');
+         document.write(num1==num2);
+         document.write('<br/>');
+         document.write(20==20);
+         document.write('<br/>');
+         document.write(20=="20");
+         document.write('<br/>');
+         document.write(20==="20");
+         document.write('<br/>');
+         document.write(20!="20");
+         document.write('<br/>');
+         document.write(20!=="20")
+//  Logical Operator
+
+ var num1 = 50
+         var num2 = 30;
+         var num3 = 20
+         document.write(num1>num2 && num1>num3);
+         document.write('<br/>');
+         document.write(num1>num2 && num3>num1);
+         document.write('<br/>');
+         document.write(num1>num2 || num3>num1);
+         document.write('<br/>');
+         document.write(num2>num1 || num3>num1);
+         document.write('<br/>')
+         document.write(!(20>15));
+         document.write('<br/>');
+         document.write(!(20<15))
+// Task 4 Grades Problem
+
+ var marks = prompt("Enter Your Marks :")  
+         if(marks >= 80 && marks < 100)
+             document.write("Your Grade is A+");
+         else if(marks >= 70 && marks <= 79 )
+             document.write("Your Grade is A");
+         else if(marks >= 60 && marks <= 69)
+             document.write("Your Grade is A-");
+         else if(marks >= 50 && marks <= 59 )
+             document.write("Your Grade is B");
+         else if(marks >= 40 && marks <= 49)
+             document.write("Your Grade is C");
+         else if(marks >= 33 && marks <= 39)
+             document.write("Your Grade is D");
+         else
+             document.write("Fail")
+// Large number problem
+ var num1 = prompt("Enter Number One :");
+ var num2 = prompt("Enter Number Two :");
+ var num3 = prompt("Enter Number Three :")
+ if (num1>num2 && num1>num3)
+         document.write("Large Number is "+ num1);
+ else if (num2>num1 && num2>num3)
+         document.write("Large Number is "+ num2);
+ else
+         document.write("Large Number is "+ num3)
+//  Letter Problem using logical operato
+ var letter = prompt("Enter a Letter :")
+ letter = letter.toLowerCase()
+ if (letter == "a" || letter == "e" || letter == "i" || letter == "o" || letter == "u")
+         document.write("vowel");
+ else 
+         document.write("Consonant");
+// Switch Case
+
+ var digit = prompt("Enter Any Digit :")
+ switch (digit){
+         case "0":
+                 document.write("Zero");
+                 break;
+         case "1":
+                 document.write("One");
+                 break;
+         case "2":
+                 document.write("Two");
+                 break;
+         case "3":
+                 document.write("Three");
+                 break;
+         case "4":
+                 document.write("Four");
+                 break;
+         case "5":
+                 document.write("Five");
+                 break;
+         case "6":
+                 document.write("Six");
+                 break;
+         case "7":
+                 document.write("Seven");
+                 break;
+         case "8":
+                 document.write("Eight");
+                 break;
+         case "9":
+                 document.write("Nine");
+                 break;
+         default:
+                 document.write("Not A Valid Digit");
+         }
+
+// Task 5 using switch case
+
+ var letter = prompt("Enter Any letter :")
+ letter = letter.toLowerCase()
+ switch (letter){
+         case "a":
+         case "e":       
+         case "i":
+         case "o":        
+         case "u":
+                 document.write("Vowel")
+                 break;
+         default:
+                 document.write("Consonant")
+ }
+ 
+// For Loop
+
+ var x
+ for(x=1; x<=100; x = x+2){
+         document.write(" "+x);
+ }
+ document.write('<br/>');
+ var x
+ for(x=100; x>=1; x = x-1){
+         document.write(" "+x);
+ }
+ 
+ var firstNumber = parseInt(prompt("Enter The FirstNumber :"))
+ var lastNumber = parseInt(prompt("Enter The LastNumber :"))
+ var sum = 0,x;
+ for (x=firstNumber; x<=lastNumber; x=x+1){
+         sum = sum + x
+ }
+ document.write(sum)
+ var x
+ for(x=1; x<=5; x=x+1){      
+         var firstNumber = parseInt(prompt("Enter The FirstNumber :"))
+         var secondNumber = parseInt(prompt("Enter The SecondNumber :"))
+         var sum = firstNumber + secondNumber
+         document.write("Result is =" + sum);
+         document.write('<br/>');
+ }
+ 
+// While Loop
+ var i = 1;
+ var sum = 0
+ while(i<=100)
+         if(i % 3 == 0 && i % 5 == 0){
+                 document.write(" " + i);
+                 sum = sum + i;
+         }      
+         i = i+1
+
+
+ document.write("Sum is "+sum);
+
+//While Loop
+
+ var i=1
+ while(i<=10){
+         document.write(" " +i);
+         i++;
+ }
+// Do While Loop
+
+// var i=1;
+
+ do {
+         document.write(" " +i);
+         i++;
+ }while(i<=20)
+
+// Break keyword
+ var i;
+ for(i=1; i<=100; i++){
+         if(i==10){
+                 break;
+         }
+         document.write(" " + i);
+ }
+ document.write("End")
+// continue keyword
+
+ var i;
+ for(i=1; i<=100; i++){
+         if(i % 2 == 0){
+                 continue;
+         }
+         document.write(" " + i);
+ }
+ document.write("End")
+// Ternary Operator
+        // 2 condition problem 
+
+ var number = parseInt(prompt("Enter Any NUmber :"))
+ var result = number > 0 ? "positive" : "negative"
+ document.write(" "+ result)
+//  Large Number Problem
+ var number1 = parseInt(prompt("Enter First NUmber :"));
+ var number2 = parseInt(prompt("Enter Second NUmber :"));
+ var number3 = parseInt(prompt("Enter Last NUmber :"));
+ var result = number1>number2 && number1>number3 ? "Number1" : number2>number1 && number2>number3 ? "Number2 " : "Number3"
+ document.write(" " +result);
+
+// Creating function
+ function square1(num){
+         var result = num * num;
+         document.write("Result is ="+result + "</br>");
+ }
+ square1(5)
+ function square2(num1, num2){
+         var result = num1 * num2;
+         document.write("Result is ="+result + "</br>");
+ }
+ square2(5, 6)
+ function square3(num1, num2){
+         var result = num1 * num2;
+         return result;
+ }
+ document.write("Result is ="+square3(6, 6))
+//  Creating a Calculato
+ function add(num1, num2){
+                 var num1 = parseInt(prompt("Enter first number:"));
+                 var num2 = parseInt(prompt("Enter second number:"));
+                 var result = num1 + num2;
+                document.write("Result is ="+result + "</br>");
+ }
+          
+  function sub(num1, num2)
+          {       
+                  var num1 = parseInt(prompt("Enter first number:"));
+                 var num2 = parseInt(prompt("Enter second number:"));
+                var result = num1 - num2;
+                  document.write("Result is ="+result + "</br>");
+          }
+  function mul(num1, num2){
+                  var num1 = parseInt(prompt("Enter first number:"));
+                  var num2 = parseInt(prompt("Enter second number:"));
+                  var result = num1 * num2;
+                  document.write("Result is ="+result + "</br>");
+          }
+   function divi(num1, num2){
+                  var num1 = parseInt(prompt("Enter first number:"));
+                  var num2 = parseInt(prompt("Enter second number:"));
+                  var result = num1 / num2;
+                  document.write("Result is ="+result + "</br>");
+          }
+  function rem(num1, num2){
+                  var num1 = parseInt(prompt("Enter first number:"));
+                 var num2 = parseInt(prompt("Enter second number:"));
+                  var result = num1 % num2;
+                  document.write("Result is ="+result + "</br>");
+  }
+          
+ add();
+ sub();
+ mul();
+ divi();
+ rem();
+
+// IIFES
+// Task 7
+
+ (function display(num1,num2){
+         var sum = num1 + num2;
+         document.write("result is =" +sum+"<br>");
+ })(5, 6);
+
+// Function Expression
+
+ var message=function display(num1,num2){
+         var sum = num1 + num2;
+         document.write("result is =" +sum);
+ }
+ message(6,6);
+
+// creating an Array
+
+var names = [" Alamin", " Summa", " Mimma", " Rabi"]
+ names.push(" Abu Sulaiman");
+ names.push(" Halima Khatun");
+ names.pop();
+ document.write(names);
+
+// OR
+ var names = new Array(5);
+ names[0] = "Alamin";
+ names[1] = "Summa";
+ names[2] = "Mimma";
+ names[3] = "Rabi";
+ names[4] = "Rushd";
+
+// User input and sum of the input
+ var num = new Array();
+ for (var i=0; i<5; i++){
+         num[i]=parseInt(prompt("Enter A number :"));
+ }
+ 
+ var i;
+ var sum = 0;
+ for (i=0 ;i<5 ; i++){
+         console.log( num[ i ]);
+         sum = sum + num[i];
+ }
+ console.log("Sum is="+ sum)
+
+ var names = [" Alamin", " Summa", " Mimma", " Rabi"];
+// shift works oposite pop
+ names.shift();
+// unshift works oposite push
+ names.unshift("Halima Khatun");
+// Add 2 value using splice
+ names.splice(2,0,"Halima Khatun","Abu Sulaiman");
+// remove value using splice
+ names.splice(1,2);
+ names.sort();
+ names.reverse();
+ document.write(names);
+
+
+// sorting number
+ var number=[25,4,6,47,1];
+ number.sort(function(a,b){
+         return a-b;
+ });
+ document.write(number);
+
+
+
+
+
+
+
+
+
+
+
