@@ -503,8 +503,124 @@ function higestRunScore(playerInfo){
     ];
     var alamin = higestRunScore(playerInfo);
     document.write(alamin);
-    
+//     Creating Object
 
+var student1 = {
+        name : "Al-amin",
+        age : 24,
+        cgpa : 3.5,
+        lang : ["english", "Bangla", "hindi"]
+    }
+    console.log(student1.name);
+    console.log(student1.age);
+    console.log(student1.cgpa);
+    console.log(student1.lang);
+// creating templates 
+function Student(name, age, cgpa, lang){
+        this.name = name;
+        this.age = age;
+        this.cgpa = cgpa;
+        this.lang = lang;
+// adding a function in the templates
+        this.display = function(){
+            console.log(this.name);
+            console.log(this.age);
+            console.log(this.cgpa);
+            console.log(this.lang);
+        }
+    }
+
+    var student1 = new Student("Alamin", 24, 3.5,["english", "Bangla", "hindi"]);
+    var student2 = new Student("Summa", 26, 3.5, ["english", "Bangla", "hindi"]);
+    var student3 = new Student("Mimma", 29, 3.5, ["english", "Bangla", "hindi"]);
+    var student4 = new Student("Rushd", 31, 3.5, ["english", "Bangla", "hindi"]);
+
+    student1.display();
+    student2.display();
+    student3.display();
+    student4.display();
+
+//     Math object
+
+Math.sqrt(5);
+2.23606797749979
+Math.sin(2)
+0.9092974268256817
+Math.abs(-5)
+5
+Math.sqrt(25);
+5
+Math.pow(2,4);
+16
+Math.floor(2.4);
+2
+Math.ceil(2.1)
+3
+Math.round(3.4)
+3
+Math.round(3.6)
+4
+Math.max(2,-3,6,1,9)
+9
+Math.random();
+0.4742261418886291
+Math.random()*6;
+3.165452256683758
+Math.random()*6 +1;
+4.282275996314961
+Math.random()*10 + 10;
+18.47017386844974
+
+// Guessing Game
+        var numofWon = 0;
+        var numofLost = 0;
+        for (var i =1; i<=5; i++){
+            var gussingNumber = parseInt(prompt("Enter a number between 1 to 5 :"));
+
+             var randomNumber = Math.floor(Math.random() *5 + 1);
+            if (gussingNumber == randomNumber){
+                document.write("You Have Won"+"<br>");
+                numofWon++;
+            }else{
+            document.write("You have lost. the random number was " + randomNumber+"<br>" );
+            numofLost++;
+        }
+        }
+        document.write("Total number of Won :" +numofWon + "<br>");
+        document.write("Total number of Lost :" +numofLost + "<br>");
+
+// Date objects
+
+        var date = new Date();
+        console.log(date); 
+        var year = date.getFullYear();
+        console.log(year);
+        var month = date.getMonth();
+        console.log(month);
+        var currentDate = date.getDate();
+        console.log(currentDate);
+        var day = date.getDay();
+        console.log(day);
+        var minutes = date.getMinutes();
+        console.log(minutes);
+        var hour = date.getHours();
+        console.log(hour);
+
+// DOM (Document Object Element)
+
+// Change html tag value using id 
+        <h1 id="alamin">ALamin Ahmed</h1>;
+         <h1 id="sulaiman">Abu Sulaiman</h1>;
+// Change value . innerHTML change the value
+        var changeById = document.getElementById("alamin");
+        changeById.innerHTML="Hello Alamin Ahmed"
+
+   // Change value by tag name . innerHTML change the value    
+
+        document.getElementsByTagName("h1")[0].innerHTML="H1";
+        // Change value by class name . innerHTML change the value    
+
+        document.getElementsByClassName("first")[0].innerHTML="H1";
 
 
 
