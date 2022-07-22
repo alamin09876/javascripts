@@ -622,6 +622,65 @@ Math.random()*10 + 10;
 
         document.getElementsByClassName("first")[0].innerHTML="H1";
 
+// changed value using queryselector
+// id using
+<h1 id="first">ALamin Ahmed</h1> 
+document.querySelector("#first").innerHTML = "changed text";
+// class using
+document.querySelector(".second").innerHTML = "changed text";
+// tag using
+document.querySelector("h1").innerHTML = "changed text";
+// akta html ar vitora onno akta html tag thakla
+<ul>
+        <li><a>First</a></li>
+        <li>Second</li>
+    </ul>
+document.querySelector("li a").innerHTML = "changed text";
+// div ar moddha thakla class and tag name
+<div class="first">
+        <a>module</a>
+    </div>
+document.querySelector(".first a").innerHTML = "changed text";
+// querySelectorAll class
+<p>first</p>;
+<p>second</p>;
+document.querySelectorAll("p")[0].innerHTML = "changed ";
+// onclick method
+
+<button onclick="myMessage()">Click Me</button>
+function myMessage(){
+        alert("I am button 1");
+    }
+
+// using id to print another value
+// html code
+
+{/* <button onclick="myMessage()">Click Me</button>
+<button onclick="myMessage2()">Click Me</button>
+<p id="paraId"></p> */}
+// js code
+var myMess = document.querySelector("#paraId");
+function myMessage(){
+   myMess.innerHTML = "I am paragraph 1"
+}
+function myMessage2(){
+    myMess.innerHTML = "I am paragraph 2"
+}
+
+// 
+{/* <button onclick="myPicture1()">Alamin</button>
+    <button onclick="myPicture2()">Other</button>
+    <br>
+    <img id="picture" src="#" alt="" height="300px" width="300px"> */}
+    
+    var myMess = document.querySelector("#picture");
+function myPicture1(){
+   myMess.src = "img/alamin.jpg";
+}
+function myPicture2(){
+    myMess.src = "img/summa.jpg";
+}
+
 
 
 
