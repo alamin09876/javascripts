@@ -679,8 +679,58 @@ function myPicture1(){
 }
 function myPicture2(){
     myMess.src = "img/summa.jpg";
+
 }
 
+// change style using js
+<a href="#">Visit Google</a>
+var link = document.getElementsByTagName("a")[0];
+
+link.innerHTML ="Visit you tube"
+link.style.textDecoration = "none"
+link.style.color = "green"
+link.href = "https://www.youtube.com/watch?v=B3Q5X8r_ldw&list=PLgH5QX0i9K3qzryglMjcyEktz4q7ySunX&index=37"
+
+// creatig html element using js
+
+{/* <div id="my-div" style="background-color: brown;">
+        <h1>Hello</h1>
+        <h1>Good bye</h1>
+    </div> */}
+
+var heading3 = document.createElement("h1");
+var text = document.createTextNode("This is heading three");
+heading3.appendChild(text);
+
+var myDiv = document.getElementById("my-div");
+myDiv.appendChild(heading3);
+
+// remove element
+// find the element then use removeChild
+var heading2 = document.getElementsByTagName("h1")[1];
+myDiv.removeChild(heading2);
+// added element in top
+
+
+var heading0 = document.createElement("h1");
+var text0 = document.createTextNode("This is heading Zero");
+heading0.appendChild(text0);
+
+
+var heading1 = document.getElementsByTagName("h1")[0];
+myDiv.insertBefore(heading0, heading1);
+
+// find class and add class and also remove class
+
+document.getElementById("my-div").classList;
+
+document.getElementById("my-div").classList.add("my-class2");
+
+document.getElementById("my-div").classList;
+
+document.getElementById("my-div").classList.remove("my-class");
+
+document.getElementById("my-div").classList;
 
 
 
