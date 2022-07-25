@@ -732,6 +732,54 @@ document.getElementById("my-div").classList.remove("my-class");
 
 document.getElementById("my-div").classList;
 
+// img slider
+
+{/* <button onClick="prev()">Previous</button>
+    <img src="img/alamin.jpg" alt="" width="500px" height="500px">
+    <button onClick="next()">Next</button> */}
+
+    var photos = ["img/alamin.jpg", "img/summa.jpg", "img/alamin2.jpg"]
+
+var imgTag = document.querySelector("img");
+
+var count = 0;
+
+function next(){
+    count++;
+    if(count>=photos.length){
+        count = 0;
+        imgTag.src = photos[count];
+    }else{
+        imgTag.src = photos[count];
+    }
+}
+function prev(){
+    count--;
+    if(count<0){
+        count = photos.length-1;
+        imgTag.src = photos[count];
+    }else{
+        imgTag.src = photos[count];
+    }
+}
+//  Changing Css style dynamic
+
+{/* <p id="paraId">This is my paragraph</p>
+    <button onClick="addstyle()">AddStyle</button>
+    <button onClick="removeStyle()">RemoveStyle</button> */}
+    
+    var myVar = document.querySelector("#paraId");
+    function addstyle(){
+        
+        myVar.classList.add("para-style");
+    }
+     function removeStyle(){
+         
+         myVar.classList.remove("para-style");
+     }
+    
+    
+
 
 
 
