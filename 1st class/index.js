@@ -777,7 +777,84 @@ function prev(){
          
          myVar.classList.remove("para-style");
      }
-    
+     
+// annonimus function
+{/* <button>CLick Me</button> */}
+document.querySelector("button").addEventListener("click", function (){
+        alert("Hello");
+    });
+
+// event listner
+//  <h1>I miss my country</h1>
+//  .my-style{
+//         color:tomato;
+//         font-size:30px;
+//         background-color:bisque;
+//     }
+
+var myVar = document.querySelector("h1")
+
+myVar.addEventListener("mouseover", function(){
+    myVar.classList.add("my-style");
+})
+myVar.addEventListener("mouseout", function(){
+    myVar.classList.remove("my-style");
+})
+
+// event listner with multiple elements
+
+{/* <h1>You have not click any button yet</h1>
+    <button class="myButton">Button One</button>
+    <button class="myButton">Button Two</button>
+    <button class="myButton">Button Three</button> */}
+    var len = document.querySelectorAll(".myButton").length;
+
+    for (var i=0; i< len; i++){
+        document.querySelectorAll(".myButton")[i].addEventListener("click", function(){
+            var text = this.innerHTML;
+            document.querySelector("h1").innerHTML= text +" is Clicked";
+        });
+    }
+
+// play audio in javascript
+{/* <button class="myButton">Button One</button>
+    <button class="myButton">Button Two</button>
+    <button class="myButton">Button Three</button> */}
+//     button{
+//         width: 100px;
+//         height: 100px;
+//         background-color: blueviolet;
+//         color: white;
+//     }
+
+
+var len = document.querySelectorAll(".myButton").length;
+
+for (var i=0; i< len; i++){
+    document.querySelectorAll(".myButton")[i].addEventListener("click", function(){
+        var text = this.innerHTML;
+        console.log(text);
+        audioPlay(text);
+    });
+}
+
+function audioPlay(text){
+    switch (text){
+        case "Button One":
+            var audio = new Audio("sounds/one.wav");
+            audio.play();
+            break;
+        case "Button Two":
+            var audio = new Audio("sounds/two.wav");
+            audio.play();
+            break;
+        case "Button Three":
+                var audio = new Audio("sounds/three.wav");
+                audio.play();
+                break;
+    }
+}
+
     
 
 
