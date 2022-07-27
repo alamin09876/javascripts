@@ -1,10 +1,11 @@
 
-var count = 0;
-document.querySelector("textarea").addEventListener("keypress", function(event){
-    count++;
-    
-    
-    document.querySelector("p").innerHTML = "You have been pressed " + count;
 
 
-});
+var department = document.querySelector("#department");
+
+department.addEventListener("change", handlerDepartment);
+function handlerDepartment(e){
+    console.log("Checked");
+    console.log(e.target.value);
+}
+

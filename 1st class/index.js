@@ -1002,6 +1002,69 @@ document.querySelector("textarea").addEventListener("keypress", function(event){
 
 });
 
+// DOm Event
+
+// change 
+// checkbox
+// h2>How do you like in peogramming</h2>
+//     <label for="program">
+//         <input type="checkbox" name="program" id="" value="c"/>
+//         C
+//     </label>
+//     <label for="java">
+//         <input type="checkbox" name="program" id="" value="java"/>
+//         java
+//     </label>
+
+var programs = document.querySelectorAll("input[name = program]");
+Array.from(programs).map((program)=>{
+    program.addEventListener("change", programHandler);
+});
+
+function programHandler(e){
+    if (e.target.checked){
+        console.log(e.target.value);
+    }
+    
+}
+
+// input
+{/* <label for="name">Name :
+        <input type="text" name="name" class="name-input" id="name-input">
+
+    </label> */}
+var input = document.querySelector("input");
+
+ input.addEventListener("change", changeHandler);
+
+ function changeHandler(e){
+    console.log(e);
+    console.log(e.type);
+    console.log(e.target);
+     console.log(e.target.className);
+     console.log(e.target.id);
+     console.log(e.target.value);
+
+   
+ }
+
+//  Select
+
+{/* <label for="name">Depart Name :</label>
+    <select name="department" id="department">
+        <option value="cse">CSE</option>
+        <option value="eee">EEE</option>
+        <option value="llb">LLB</option>
+    </select> */}
+
+    var department = document.querySelector("#department");
+
+department.addEventListener("change", handlerDepartment);
+function handlerDepartment(e){
+    console.log("Checked");
+    console.log(e.target.value);
+}
+
     
 
 
