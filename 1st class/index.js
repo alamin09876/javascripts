@@ -855,6 +855,153 @@ function audioPlay(text){
     }
 }
 
+// Add and remove animation 
+
+{/* <button class="myButton a">a</button>
+    <button class="myButton b">b</button>
+    <button class="myButton c">c</button> */}
+
+//     button{
+//         width: 100px;
+//         height: 100px;
+//         margin:50px;
+//         color: white;
+//     }
+    
+//     .anim{
+//         box-shadow: 0 15px 18px 0 tomato;
+//         opacity: 0.5;
+        
+//     }
+
+
+var len = document.querySelectorAll(".myButton").length;
+
+for (var i=0; i< len; i++){
+    document.querySelectorAll(".myButton")[i].addEventListener("click", function(){
+        var text = this.innerHTML;
+        console.log(text);
+        audioPlay(text);
+        playAnimation (text)
+    });
+}
+
+function audioPlay(text){
+    switch (text){
+        case "a":
+            var audio = new Audio("sounds/one.wav");
+            audio.play();
+            break;
+        case "b":
+            var audio = new Audio("sounds/two.wav");
+            audio.play();
+            break;
+        case "c":
+                var audio = new Audio("sounds/three.wav");
+                audio.play();
+                break;
+    }
+}
+
+function playAnimation (text){
+    var selectButton = document.querySelector("." + text);
+    selectButton.classList.add("anim");
+
+    setTimeout(function(){
+        selectButton.classList.remove("anim");
+    },1000);
+}
+
+// keypress listener
+
+{/* <button class="myButton a">a</button>
+    <button class="myButton b">b</button>
+    <button class="myButton c">c</button> */}
+
+//     button{
+//         width: 100px;
+//         height: 100px;
+//         margin:50px;
+//         color: white;
+//     }
+    
+//     .anim{
+//         box-shadow: 0 15px 18px 0 tomato;
+//         opacity: 0.5;
+        
+//     }
+
+
+var len = document.querySelectorAll(".myButton").length;
+
+for (var i=0; i< len; i++){
+    document.querySelectorAll(".myButton")[i].addEventListener("click", function(){
+        var text = this.innerHTML;
+        console.log(text);
+        audioPlay(text);
+        playAnimation (text)
+    });
+}
+
+document.addEventListener("keypress", function(event){
+    var text = event.key;
+    audioPlay(text);
+    playAnimation(text);
+
+
+})
+function audioPlay(text){
+    switch (text){
+        case "a":
+            var audio = new Audio("sounds/one.wav");
+            audio.play();
+            break;
+        case "b":
+            var audio = new Audio("sounds/two.wav");
+            audio.play();
+            break;
+        case "c":
+                var audio = new Audio("sounds/three.wav");
+                audio.play();
+                break;
+    }
+}
+
+function playAnimation (text){
+    var selectButton = document.querySelector("." + text);
+    selectButton.classList.add("anim");
+
+    setTimeout(function(){
+        selectButton.classList.remove("anim");
+    },1000);
+}
+
+
+{/* <p>This is pressed</p> */}
+document.addEventListener("keypress", function(event){
+        var text = event.key;
+        
+        document.querySelector("p").innerHTML = "You have been pressed " + text;
+    
+    
+    });
+
+// count how much crackter you pressed
+
+{/* <textarea name="" id="" cols="30" rows="10"></textarea>
+<p>You Hve been pressed</p> */}
+
+
+var count = 0;
+document.querySelector("textarea").addEventListener("keypress", function(event){
+    count++;
+    
+    
+    document.querySelector("p").innerHTML = "You have been pressed " + count;
+
+
+});
+
     
 
 
