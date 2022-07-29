@@ -1065,6 +1065,119 @@ function handlerDepartment(e){
     console.log(e.target.value);
 }
 
+// submit event 
+
+{/* <form action="">
+      <div>
+        <label for="name"
+          >Name :
+          <input type="text" id="name" name="name" required autofocus />
+        </label>
+      </div>
+      <div>
+        <label for="email"
+          >Email :
+          <input type="email" id="email" name="email" size="30" required />
+        </label>
+      </div>
+      <div>
+        <label for="password"
+          >Password :
+          <input
+            type="password"
+            id="password"
+            name="password"
+            required
+            minlength="4"
+            maxlength="8"
+          />
+        </label>
+      </div>
+      <div>
+        <input type="submit" value="signup" />
+      </div>
+    </form> */}
+//     var form = document.querySelector("form");
+// var name = form.querySelector("div #name");
+// var email = form.querySelector("div #email");
+// var password = form.querySelector("div #password");
+
+// form.addEventListener("submit", formHandler);
+
+// function formHandler(e) {
+//     e.preventDefault();
+//     var userInfo = {
+//         name: name.value,
+//         email: email.value,
+//         password: password.value,
+//     };
+//     console.log(userInfo);
+//     name.value = "";
+//     email.value = "";
+//     password.value = "";
+// }
+
+
+// audio video event
+
+{/* <video width="400px" controls loops muted>
+      <source src="video/Battle_Symphony_(Official_Lyric_Video)_-_Linkin_Park.mp4" type="video/mp4">
+
+      your browser does not support this video
+    </video> */}
+
+    var video = document.querySelector("video");
+
+    video.addEventListener("canplay", function(){
+        console.log("canplay");
+    });
+    video.addEventListener("play", function(){
+        console.log("play");
+    });
+    video.addEventListener("pause", function(){
+        console.log("pause");
+    });
+    video.addEventListener("playing", function(){
+        console.log("playing");
+    });
+    video.addEventListener("volumechange", function(){
+        console.log("volumechange");
+    });
+    video.addEventListener("ended", function(){
+        console.log("Thanks for watching");
+    });
+
+// load unload scroll
+
+// window.addEventListener("load", function(){
+//     console.log("load")
+// })
+// window.addEventListener("unload", function(){
+//     console.log("unload")
+// })
+// window.addEventListener("scroll", function(){
+//     console.log("scroll")
+// })
+// toggle 
+
+{/* <details>
+      <summary>Alamin</summary>
+
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, natus?</p>
+    </details> */}
+
+//     var details = document.querySelector("details");
+
+// details.addEventListener("toggle", function(e){
+//     console.log(e.target.open);
+// } );
+//  resize event
+// window.addEventListener("resize", function(){
+//     var width = this.window.outerWidth;
+//     var height = this.window.outerHeight;
+
+//     console.log(`height: ${width}, width${width}`);
+// });
     
 
 
