@@ -1178,7 +1178,71 @@ function handlerDepartment(e){
 
 //     console.log(`height: ${width}, width${width}`);
 // });
-    
+
+// MouseEvent 
+
+    // <div>
+    //   <p>I am alamin</p>
+    // </div>
+    var div = document.querySelector("div");
+
+div.addEventListener("click", function(){
+    console.log("click is occouard");
+})
+// div.addEventListener("dblclick", function(){
+//     console.log("dblclick is occouard");
+// })
+// div.addEventListener("mousedown", function(){
+//     console.log("mousedown is occouard");
+// })
+// div.addEventListener("mouseup", function(){
+//     console.log("mouseup is occouard");
+// })
+// div.addEventListener("mouseenter", function(){
+//     console.log("mouseenter is occouard");
+// })
+// div.addEventListener("mouseleave", function(){
+//     console.log("mouseleave is occouard");
+// })
+// div.addEventListener("mouseover", function(){
+//     console.log("mouseover is occouard");
+// })
+div.addEventListener("mousemove", function(e){
+    console.log("clientx" + e.clientX + "clientY " + e.clientY);
+})
+
+// click event in mouse event
+
+{/* <div id="my-div" class="my-class">
+      <p>I am alamin</p>
+    </div> */}
+
+var div = document.querySelector("div");
+
+ div.addEventListener("click", function(e){
+     console.log(e.target);
+     console.log(e.target.id);
+     console.log(e.target.className);
+     console.log(e.target.innerHTML);
+     console.log(e.target.innerText);
+     console.log(e.target.textContent);
+     
+
+ })
+
+//  <div id="my-div" class="my-class">
+//       <p>I am alamin</p>
+//       <button class="btn">button1</button>
+//       <button class="btn">button2</button>
+//       <button class="btn">button3</button>
+//     </div>
+
+ var buttons = document.querySelectorAll(".btn");
+Array.from(buttons).map((button)=>{
+    button.addEventListener("click", function(e){
+        console.log(e.target.innerText);
+    });
+});
 
 
 

@@ -1,22 +1,41 @@
-// window.addEventListener("load", function(){
-//     console.log("load")
+// var div = document.querySelector("div");
+
+//  div.addEventListener("click", function(e){
+//      console.log(e.target);
+//      console.log(e.target.id);
+//      console.log(e.target.className);
+//      console.log(e.target.innerHTML);
+//      console.log(e.target.innerText);
+//      console.log(e.target.textContent);
+     
+
+//  })
+
+var buttons = document.querySelectorAll(".btn");
+Array.from(buttons).map((button)=>{
+    button.addEventListener("click", function(e){
+        console.log(e.target.innerText);
+    });
+});
+// div.addEventListener("dblclick", function(){
+//     console.log("dblclick is occouard");
 // })
-// window.addEventListener("unload", function(){
-//     console.log("unload")
+// div.addEventListener("mousedown", function(){
+//     console.log("mousedown is occouard");
 // })
-// window.addEventListener("scroll", function(){
-//     console.log("scroll")
+// div.addEventListener("mouseup", function(){
+//     console.log("mouseup is occouard");
 // })
-
-// window.addEventListener("resize", function(){
-//     var width = this.window.outerWidth;
-//     var height = this.window.outerHeight;
-
-//     console.log(`height: ${width}, width${width}`);
-// });
-var details = document.querySelector("details");
-
-details.addEventListener("toggle", function(e){
-    console.log(e.target.open);
-} );
-
+// div.addEventListener("mouseenter", function(){
+//     console.log("mouseenter is occouard");
+// })
+// div.addEventListener("mouseleave", function(){
+//     console.log("mouseleave is occouard");
+// })
+// div.addEventListener("mouseover", function(){
+//     console.log("mouseover is occouard");
+// })
+// div.addEventListener("mousemove", function(e){
+//     console.log("clientx" + e.clientX + "clientY " + e.clientY);
+//     console.log("offsetX" + e.offsetX + "offsetY " + e.offsetY);
+// })

@@ -1,3 +1,6 @@
 div{
-    margin-bottom: 10px;;
+    width:20rem;
+    height:20rem;
+    background-color:brown;
+    padding:2rem;
 }
