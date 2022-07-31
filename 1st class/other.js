@@ -1,20 +1,17 @@
+var div = document.querySelector("div");
+var p = document.querySelector("p");
 
+p.addEventListener("dragstart", function(e){
+    e.dataTransfer.setData("Text", e.target.id);
+});
 
-var input = document.querySelector('input');
-
-input.addEventListener("blur", function(e){
-    input.value= e.target.value.toUpperCase();
-    console.log(e.target.value);
+div.addEventListener("dragover", function(e){
+    e.preventDefault();
 })
-input.addEventListener("focus", function(){
-    input.style.backgroundColor="Orange";
-    input.style.padding = "10px";
-    input.style.border="none";
-    input.style.marginLeft ="100px";
+
+div.addEventListener("drop", function(e){
+    let id = e.dataTransfer.getData("Text");
+    console.log(id);
+    div.appendChild(document.getElementById(id));
+    e.preventDefault();
 })
-// input.addEventListener("focusin", function(){
-//     console.log("focusin is occuped")
-// })
-// input.addEventListener("focusout", function(){
-//     console.log("focusout is occuped")
-// })

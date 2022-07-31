@@ -1288,6 +1288,46 @@ input.addEventListener("focus", function(){
 //     console.log("focusout is occuped")
 // })
 
+// clipboard event 
+
+{/* <input type="text">
+    <p></p> */}
+var input = document.querySelector("input");
+var p = document.querySelector("p");
+
+input.addEventListener("copy", function(){
+    p.innerText = ("You have copyid");
+    
+} );
+input.addEventListener("cut", function(){
+    p.innerText = ("You have cut");
+} );
+input.addEventListener("paste", function(){
+    p.innerText = ("You have paste");
+} );
+
+// drop event
+
+{/* <div id="div1"></div>
+    <p id="drag1" draggable="true">Hi I am Alamin</p> */}
+
+    var div = document.querySelector("div");
+var p = document.querySelector("p");
+
+p.addEventListener("dragstart", function(e){
+    e.dataTransfer.setData("Text", e.target.id);
+});
+
+div.addEventListener("dragover", function(e){
+    e.preventDefault();
+})
+
+div.addEventListener("drop", function(e){
+    let id = e.dataTransfer.getData("Text");
+    console.log(id);
+    div.appendChild(document.getElementById(id));
+    e.preventDefault();
+})
 
 
 
