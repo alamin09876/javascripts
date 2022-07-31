@@ -1244,6 +1244,50 @@ Array.from(buttons).map((button)=>{
     });
 });
 
+// keyboard Event
+
+{/* <textarea name="" id="" cols="30" rows="10"></textarea> */}
+
+var keyboard = document.querySelector("textarea");
+
+ keyboard.addEventListener("keydown", function(e){
+     console.log("e.repeat");
+ });
+// keyboard.addEventListener("keypress", function(){
+//     console.log("keypress");
+// });
+keyboard.addEventListener("keyup", function(e){
+    // console.log(e.key);
+    // console.log(e.keyCode);
+    // console.log(e.code);
+    // console.log(e.shiftKey);
+});
+
+// focus Event
+
+{/* <input type="text"></input> */}
+
+
+
+var input = document.querySelector('input');
+
+input.addEventListener("blur", function(e){
+    input.value= e.target.value.toUpperCase();
+    console.log(e.target.value);
+})
+input.addEventListener("focus", function(){
+    input.style.backgroundColor="Orange";
+    input.style.padding = "10px";
+    input.style.border="none";
+    input.style.marginLeft ="100px";
+})
+// input.addEventListener("focusin", function(){
+//     console.log("focusin is occuped")
+// })
+// input.addEventListener("focusout", function(){
+//     console.log("focusout is occuped")
+// })
+
 
 
 
